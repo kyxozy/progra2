@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <h1>Usuario Invitado</h1>
+    <p>
+      Don't need login for see
+    </p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Go to page</button>
+    </form>
+</div>
+{% endblock %}
